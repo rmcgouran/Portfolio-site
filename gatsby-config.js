@@ -1,9 +1,15 @@
 module.exports = {
-    siteMetadata: {
-      title: `Portfolio`,
-        siteUrl: `https://www.yourdomain.tld`,
+  siteMetadata: {
+    title: `Ryan McGOuran | Portfolio`,
+    siteUrl: `https://www.mcgouran.co.uk`,
+  },
+  plugins: [
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: ["roboto mono"],
+      },
+      display: "swap",
     },
-    plugins: [
-
-    ]
-}
+  ],
+};
