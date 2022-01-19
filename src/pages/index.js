@@ -11,6 +11,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import HeroSection from "../components/HeroSection";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 export default function IndexPage() {
   const [darkMode, setDarkMode] = useState(true);
@@ -96,6 +97,7 @@ export default function IndexPage() {
         />
         <HeroSection />
         <Projects />
+        <Footer />
       </Paper>
     </ThemeProvider>
   );

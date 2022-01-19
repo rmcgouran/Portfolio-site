@@ -110,33 +110,4 @@ const projectsData = [
       },
     ],
   },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-
-    tags: ["GraphQL", "Apollo Client", "Prisma", "Material-UI"],
-    links: [
-      {
-        icon: GitHubIcon,
-        href: "https://www.github.com",
-      },
-      {
-        icon: OpenInNewIcon,
-        href: "https://www.google.com",
-      },
-    ],
-  },
-  {
-    title: "Lorem ipsum dolor ",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-    tags: ["React.js", "Node.js", "PostgreSQL", "Next.js"],
-    links: [
-      {
-        icon: OpenInNewIcon,
-        href: "https://www.google.com",
-      },
-    ],
-  },
 ];
