@@ -39,8 +39,7 @@ function TagsContainer({ tags }) {
           className={styles.tag}
           label={tag}
           variant="outlined"
-          key={tag}
-        ></Chip>
+          key={tag}></Chip>
       ))}
     </div>
   );
@@ -99,7 +98,7 @@ export default function Projects() {
 
 const projectsData = [
   {
-    title: "Second Year - Software Engineering module",
+    title: "Second Year - Software Engineering Module",
     description:
       "This module was split into 3 tasks: 1. Writing functions to pass premade tests. 2. Refactoring code 3. Writing tests to pass prewritten code. The first two tasks were completed with another student as a pair programming task and the final was a solo task.I achieved a 1st for this module.",
     tags: ["C++", "Boost UTF"],

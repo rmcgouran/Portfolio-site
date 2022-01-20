@@ -47,23 +47,21 @@ export default function HeroSection() {
           className={styles.content}
           container
           justifyContent="space-between"
-          alignItems="center"
-        >
+          alignItems="center">
           <Zoom in={shouldShow}>
             <Grid item sm={8}>
               <Typography component="h1" variant="h3">
-                Hi, I'm Ryan a Software Engineer
+                testtesttesttesttesttest
               </Typography>
               <Typography variant="h5">
-                I'm currently a student at Nottingham Trent University studying
-                BSc (Hons) Software Engineering
+                testtesttesttesttesttesttesttesttest testtesttest testtesttest
+                testtesttest testtesttest testtesttest
               </Typography>
               <Box my={1}>
                 <Button
                   href="mailto:ryan@mcgouran.co.uk"
                   variant="outlined"
-                  color="white"
-                >
+                  color="white">
                   Contact me
                 </Button>
               </Box>
