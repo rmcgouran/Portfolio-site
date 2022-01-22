@@ -12,6 +12,7 @@ import HeroSection from "../components/HeroSection";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Scroll from "../components/Scroll";
 
 export default function IndexPage() {
   const [darkMode, setDarkMode] = useState(true);
@@ -74,10 +75,10 @@ export default function IndexPage() {
   }));
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider title="Ryan McGOuran | Portfolio" theme={theme}>
       <Paper style={{ height: "100vh" }}>
         <CssBaseline />
-
+        <Scroll showBelow={100} />
         <Header />
         <FormControlLabel
           style={{

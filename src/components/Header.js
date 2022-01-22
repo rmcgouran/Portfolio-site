@@ -11,14 +11,13 @@ import {
   Divider,
   List,
   ListItem,
-  FormControlLabel,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
+  { name: "About", href: "about" },
+  { name: "Projects", href: "projects" },
 ];
 
 const useStyles = makeStyles((theme) => ({
