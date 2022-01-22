@@ -66,7 +66,10 @@ function Project({ title, description, imageUrl, tags, links }) {
           <CardActions>
             <div className={styles.links}>
               {links.map((linkItem) => (
-                <IconButton href={linkItem.href} key={linkItem.href}>
+                <IconButton
+                  href={linkItem.href}
+                  key={linkItem.href}
+                  target="_blank">
                   <linkItem.icon />
                 </IconButton>
               ))}
@@ -85,7 +88,7 @@ export default function Projects() {
   return (
     <Container maxWidth="md" id="projects">
       <Box pt={8} mb={2}>
-        <Typography variant="h4">Projects</Typography>
+        <Typography variant="h4">Projects & Repos</Typography>
       </Box>
       <Grid container direction="column" spacing={3}>
         {projectsData.map((data) => (
@@ -106,6 +109,22 @@ const projectsData = [
       {
         icon: GitHubIcon,
         href: "https://github.com/rmcgouran/Software-Engineering",
+      },
+    ],
+  },
+  {
+    title: "NHS Covid API React app",
+    description:
+      "This project was built as part of a job application to Nottingham County Council. I found this project initially quite tough as it ws my first time building a React project without following any sort of guide or tutorial.",
+    tags: ["React", "JavaScript", "NPM"],
+    links: [
+      {
+        icon: GitHubIcon,
+        href: "https://github.com/rmcgouran/Software-Engineering",
+      },
+      {
+        icon: OpenInNewIcon,
+        href: "https://mcgouran.co.uk/ncc",
       },
     ],
   },

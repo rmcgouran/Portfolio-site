@@ -5,12 +5,10 @@ import {
   Typography,
   Grid,
   Paper,
-  Button,
-  Box,
-  Hidden,
   Zoom,
 } from "@material-ui/core";
 import Social from "./Social";
+import Profile from "../components/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -46,32 +44,70 @@ export default function HeroSection() {
         <Grid
           className={styles.content}
           container
-          justifyContent="space-between"
+          justifyContent="space-around"
           alignItems="center">
           <Zoom in={shouldShow}>
-            <Grid item sm={8}>
-              <Typography component="h1" variant="h3">
-                testtesttesttesttesttest
+            <Grid item sm={15}>
+              <Typography
+                component="h1"
+                variant="h3"
+                style={{
+                  // fontSize: 20,
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  background:
+                    "-webkit-linear-gradient(266.96deg, rgb(63, 197, 255) -21.03%, rgb(255, 62, 201) 100%)",
+                  webkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}>
+                Ryan McGouran
               </Typography>
-              <Typography variant="h5">
-                testtesttesttesttesttesttesttesttest testtesttest testtesttest
-                testtesttest testtesttest testtesttest
+              <Typography
+                variant="h5"
+                style={{
+                  // fontSize: 20,
+                  textAlign: "center",
+                  paddingTop: "50px",
+                }}>
+                I'm a BSc (Hons) Software Engineering student at Nottingham
+                Trent University. Currently I'm on placement within the
+                Universities Digital Technologies department.
               </Typography>
-              <Box my={1}>
+              <Typography
+                variant="h5"
+                style={{
+                  // fontSize: 20,
+                  textAlign: "center",
+                  paddingTop: "50px",
+                }}>
+                Languages and frameworks I've used: C++, Java, Python,
+                JavaScript, SQL, HTML, CSS, PHP, React and React Native.
+              </Typography>
+              <Typography
+                variant="h5"
+                style={{
+                  // fontSize: 20,
+                  textAlign: "center",
+                  paddingTop: "50px",
+                }}>
+                I also have experience with React and React Native for mobile
+                development.
+              </Typography>
+              {/* <Box my={1}>
                 <Button
                   href="mailto:ryan@mcgouran.co.uk"
                   variant="outlined"
                   color="white">
                   Contact me
                 </Button>
-              </Box>
+              </Box> */}
             </Grid>
           </Zoom>
-          <Hidden xsDown>
+          {/* <Hidden xsDown>
             <Grid item>
-              <Social direction="column" />
+              <Social direction="row" />
             </Grid>
-          </Hidden>
+          </Hidden> */}
         </Grid>
       </Container>
     </Paper>

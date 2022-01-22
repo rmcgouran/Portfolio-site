@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import { ThemeProvider, createTheme, styled } from "@material-ui/core/styles";
-import {
-  Paper,
-  Switch,
-  FormControlLabel,
-  Typography,
-  Stack,
-} from "@material-ui/core";
+import { Paper, Switch, FormControlLabel } from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import HeroSection from "../components/HeroSection";
-import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Scroll from "../components/Scroll";
+import Profile from "../components/Avatar";
+import Inter from "../fonts/Inter.ttf";
 
 export default function IndexPage() {
   const [darkMode, setDarkMode] = useState(true);
@@ -22,7 +17,21 @@ export default function IndexPage() {
       type: darkMode ? "dark" : "light",
     },
     typography: {
-      fontFamily: ["Oswald", "sans-serif"].join(","),
+      fontFamily: ["Inter", "sans-serif"].join(","),
+    },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: `
+        @font-face {
+          font-family: 'Inter';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: local('Inter'), local('Inter-Regular'), url(${Inter}) format('woff2');
+          unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+        }
+      `,
+      },
     },
   });
 
@@ -79,7 +88,7 @@ export default function IndexPage() {
       <Paper style={{ height: "100vh" }}>
         <CssBaseline />
         <Scroll showBelow={100} />
-        <Header />
+        {/* <Header /> */}
         <FormControlLabel
           style={{
             display: "flex",
@@ -87,6 +96,9 @@ export default function IndexPage() {
             justifyContent: "center",
             paddingTop: "20px",
             paddingBottom: "20px",
+            marginLeft: "auto",
+            right: "50%",
+            width: "40px",
           }}
           control={
             <MaterialUISwitch
@@ -96,6 +108,7 @@ export default function IndexPage() {
             />
           }
         />
+        <Profile />
         <HeroSection />
         <Projects />
         <Footer />

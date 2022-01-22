@@ -46,8 +46,7 @@ export default function Header() {
                 variant="button"
                 underline="none"
                 href={item.href}
-                key={item.name}
-              >
+                key={item.name}>
                 {item.name}
               </Link>
             ))}
@@ -63,14 +62,12 @@ export default function Header() {
         anchor="right"
         open={open}
         onOpen={() => setOpen(true)}
-        onClose={() => setOpen(false)}
-      >
+        onClose={() => setOpen(false)}>
         <div
           onClick={() => setOpen(false)}
           onKeyPress={() => setOpen(false)}
           role="button"
-          tabIndex={0}
-        >
+          tabIndex={0}>
           <IconButton>
             <ChevronRightIcon />
           </IconButton>
@@ -84,8 +81,7 @@ export default function Header() {
                 color="textPrimary"
                 variant="button"
                 underline="none"
-                href={item.href}
-              >
+                href={item.href}>
                 {item.name}
               </Link>
             </ListItem>
