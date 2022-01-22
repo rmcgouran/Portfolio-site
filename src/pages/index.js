@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { ThemeProvider, createTheme, styled } from "@material-ui/core/styles";
-import { Paper, Switch, FormControlLabel } from "@material-ui/core";
+import {
+  Paper,
+  Switch,
+  FormControlLabel,
+  useMediaQuery,
+} from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
@@ -10,11 +15,12 @@ import Profile from "../components/Avatar";
 import Inter from "../fonts/Inter.ttf";
 
 export default function IndexPage() {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [darkMode, setDarkMode] = useState(true);
 
   const theme = createTheme({
     palette: {
-      type: darkMode ? "dark" : "light",
+      type: prefersDarkMode ? "dark" : "light",
     },
     typography: {
       fontFamily: ["Inter", "sans-serif"].join(","),
@@ -89,7 +95,7 @@ export default function IndexPage() {
         <CssBaseline />
         <Scroll showBelow={100} />
         {/* <Header /> */}
-        <FormControlLabel
+        {/* <FormControlLabel
           style={{
             display: "flex",
             alignItems: "center",
@@ -107,7 +113,7 @@ export default function IndexPage() {
               onChange={() => setDarkMode(!darkMode)}
             />
           }
-        />
+        /> */}
         <Profile />
         <HeroSection />
         <Projects />
