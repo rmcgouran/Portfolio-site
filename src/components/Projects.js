@@ -116,15 +116,27 @@ const projectsData = [
     title: "NHS Covid API React app",
     description:
       "This project was built as part of a job application to Nottingham County Council. I found this project initially quite tough as it ws my first time building a React project without following any sort of guide or tutorial.",
-    tags: ["React", "JavaScript", "NPM"],
+    tags: ["React", "JavaScript", "NPM", "NHS Covid-19 API"],
     links: [
       {
         icon: GitHubIcon,
-        href: "https://github.com/rmcgouran/Software-Engineering",
+        href: "https://github.com/rmcgouran/ncc",
       },
       {
         icon: OpenInNewIcon,
         href: "https://mcgouran.co.uk/ncc",
+      },
+    ],
+  },
+  {
+    title: "Portfolio Site",
+    description:
+      "As I wanted to dive more deeply into the React framework I decided to build this site with it. I aim to continously add/remove features as my skillset with React increases.",
+    tags: ["React", "Gatsby", "JavaScript", "NPM"],
+    links: [
+      {
+        icon: GitHubIcon,
+        href: "https://github.com/rmcgouran/Portfolio-site",
       },
     ],
   },
