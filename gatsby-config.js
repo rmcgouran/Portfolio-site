@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ryan McGOuran | Portfolio`,
+    title: `Ryan McGouran | Portfolio`,
     siteUrl: `https://www.mcgouran.co.uk`,
   },
   plugins: [
