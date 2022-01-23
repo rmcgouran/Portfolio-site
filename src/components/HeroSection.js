@@ -6,9 +6,8 @@ import {
   Grid,
   Paper,
   Zoom,
+  withStyles,
 } from "@material-ui/core";
-import Social from "./Social";
-import Profile from "../components/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -37,6 +36,14 @@ export default function HeroSection() {
   const [shouldShow, setShouldShow] = useState(false);
   useEffect(() => setShouldShow(true), []);
 
+  const CustomColor = withStyles({
+    root: {
+      background: "-webkit-linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    },
+  })(Typography);
+
   return (
     <Paper className={styles.section} id="about">
       <div className={styles.overlay}></div>
@@ -48,20 +55,16 @@ export default function HeroSection() {
           alignItems="center">
           <Zoom in={shouldShow}>
             <Grid item sm={15}>
-              <Typography
+              <CustomColor
                 component="h1"
                 variant="h3"
                 style={{
                   // fontSize: 20,
                   fontWeight: "bold",
                   textAlign: "center",
-                  background:
-                    "-webkit-linear-gradient(266.96deg, rgb(63, 197, 255) -21.03%, rgb(255, 62, 201) 100%)",
-                  webkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
                 }}>
                 Ryan McGouran
-              </Typography>
+              </CustomColor>
               <Typography
                 variant="h5"
                 style={{
