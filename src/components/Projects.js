@@ -39,7 +39,8 @@ function TagsContainer({ tags }) {
           className={styles.tag}
           label={tag}
           variant="outlined"
-          key={tag}></Chip>
+          key={tag}
+        ></Chip>
       ))}
     </div>
   );
@@ -69,7 +70,8 @@ function Project({ title, description, imageUrl, tags, links }) {
                 <IconButton
                   href={linkItem.href}
                   key={linkItem.href}
-                  target="_blank">
+                  target="_blank"
+                >
                   <linkItem.icon />
                 </IconButton>
               ))}

@@ -74,7 +74,7 @@ export default function HeroSection() {
                 }}>
                 I'm a BSc (Hons) Software Engineering student at Nottingham
                 Trent University. Currently I'm on placement within the
-                Universities Digital Technologies department.
+                University's Digital Technologies department.
               </Typography>
               <Typography
                 variant="h5"

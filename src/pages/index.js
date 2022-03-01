@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import { Paper, useMediaQuery, List } from "@material-ui/core";
+import { Paper, useMediaQuery} from "@material-ui/core";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
@@ -9,10 +9,11 @@ import Scroll from "../components/Scroll";
 import Profile from "../components/Avatar";
 import Inter from "../fonts/Inter.ttf";
 import { Helmet } from "react-helmet";
+import EnableColorOnDarkAppBar from "../components/NavBar";
+import Blogs from "../components/Blog";
 
 export default function IndexPage() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  // const [darkMode, setDarkMode] = useState(true);
 
   const theme = createTheme({
     palette: {
@@ -45,10 +46,12 @@ export default function IndexPage() {
           <meta charSet="utf-8" />
           <title>Ryan McGouran | Portfolio</title>
         </Helmet>
+        <EnableColorOnDarkAppBar />
         <Scroll showBelow={100} />
         <Profile />
         <HeroSection />
         <Projects />
+        <Blogs />
         <Footer />
       </Paper>
     </ThemeProvider>
